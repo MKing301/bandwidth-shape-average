@@ -229,9 +229,9 @@ def check_shape_bandwidth(device):
             record['comments'] = f'Exception on {host["host"]} - {hostname}: {e}'
             record['timestamp'] = datetime.datetime.now(tz=EST)
 
-            # Close ssh session
-            net_connect.disconnect()
-            logger.info('\nSSH Connection closed.')
+        # Close ssh session
+        net_connect.disconnect()
+        logger.info('\nSSH Connection closed.')
 
     except netmiko_exceptions as e:
         logger.error(f'Failed to connect to {host["host"]} - {hostname}; Exception: {e}')
