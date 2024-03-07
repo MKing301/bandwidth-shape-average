@@ -306,9 +306,7 @@ def check_shape_bandwidth(device):
     return record
 
 
-# entry point for the program
-if __name__ == '__main__':
-
+def main():
     # Set up optional argument for local run
     ap = argparse.ArgumentParser()
     _ = ap.add_argument(
@@ -374,3 +372,6 @@ if __name__ == '__main__':
         'Finished collecting shape avg and bandwidth data from a list of'
         f' {len(devices)} routers in {round(end-start, 2)} second(s)'
         )
+
+if __name__ == '__main__':
+    main()
